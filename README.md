@@ -17,11 +17,18 @@ npm install --save obento-state
 var state = new require('obento-state')();
 
 var fc = function() {
-  console.log('fc');
+  state.wait();
+  setTimeout(function() {
+    state.notify();
+  }, 1000);
 }
 
 state.listen('add:a', fc);
-state.publisb('/a/b');
+state.listen('add:b', function() {
+  // will call after 1 second from called fc()
+});
+
+state.change('/a/b');
 
 // will call 'fc'
 ```

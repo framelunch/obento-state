@@ -1,6 +1,6 @@
 {
   "name": "obento-state",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "obent-state can manage internal state change like URL.",
   "main": "index.js",
   "author": "Yuichi Ikeda <ikeda@framelunch.jp>",

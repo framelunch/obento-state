@@ -7,9 +7,9 @@ it('Data', done => {
   expect(make('a/b/')).toBe('a/b');
   expect(make('/a/b/')).toBe('a/b');
 
-  expect(extract(['a', 'b', 'c'], ['a', 'b', 'e'])).toEqual(['e']);
-  expect(extract(['a', 'b', 'c'], ['a', 'd', 'e'])).toEqual(['d', 'e']);
-  expect(extract(['a', 'b', 'c'], ['d', 'b', 'c'])).toEqual(['d', 'b', 'c']);
+  expect(extract(['a', 'b', 'c'], ['a', 'b', 'e'])).toEqual(['c']);
+  expect(extract(['a', 'b', 'c'], ['a', 'd', 'e'])).toEqual(['b', 'c']);
+  expect(extract(['a', 'b', 'c'], ['d', 'b', 'c'])).toEqual(['a', 'b', 'c']);
 
   expect(isEq('a/b', '/a/b')).toBe(true);
   expect(isEq('a/b', 'a/b/')).toBe(true);

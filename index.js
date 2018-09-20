@@ -4,7 +4,7 @@ var Data = function(value) {
   this.array = !this.data ? [''] : this.data.split('/');
 };
 Data.make = function(val) {
-  return val ? val.replace(/^\/|\/$/, '') : val;
+  return val ? val.replace(/^\/|\/$/g, '') : val;
 };
 Data.extract = function(arr1, arr2) {
   var arr = [];
